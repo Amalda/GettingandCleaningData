@@ -43,7 +43,8 @@ Resulting Files Dectionary
 Notes: 
  - Variables from 3 to the end indicate a single value in cleanData.txt and avarage value in avgData.txt
  - prefix 't' to denote time
- - prefix 'f' to indicate frequency domain signals
+ - prefix 'f' to indicate frequency domain signals 
+ - Note that measurements are normalised and so unitlless.
 
 Variables:
 ----------
