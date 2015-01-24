@@ -31,7 +31,6 @@ standard deviation. All measurements appear to be floating point numbers in the 
 
 4. Labels the data set with descriptive names appropriately; 
 	- underscores and brackets () are removed. 
-
 Then it merges the 10299x66 data frame containing features with 10299x1 data frames containing activity labels 
 and subject IDs into a 10299x68 data frame. The result will be exposed into a file named: cleanData.txt 
 
