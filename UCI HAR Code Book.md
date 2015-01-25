@@ -31,8 +31,8 @@ standard deviation. All measurements appear to be floating point numbers in the 
 
 4. Labels the data set with descriptive names appropriately; 
 	- underscores and brackets () are removed. 
-	- all feature names (attributes) and activity names are converted to lower case
-	Then it merges the 10299x66 data frame containing features with 10299x1 data frames containing activity labels 
+	- all feature names (attributes) and activity names are converted to lower case.
+	--> Then it merges the 10299x66 data frame containing features with 10299x1 data frames containing activity labels 
     and subject IDs into a 10299x68 data frame. The result will be exposed into a file named: cleanData.txt 
 
 5. The script creates a 2nd independent tidy data set with the average of each measurement for each activity 
