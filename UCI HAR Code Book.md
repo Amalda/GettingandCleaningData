@@ -22,15 +22,16 @@ standard deviation. All measurements appear to be floating point numbers in the 
 
 3. Reads activity_labels.txt and applies descriptive activity names to name activities in the data set:
 
-	- WALKING
- 	- WALKING UPSTAIRS
-	- WALKING DOWNSTRAIRS
-	- SITTING
-	- STANDING
-	- LAYING
+	- walking
+ 	- walking upstairs
+	- walking downstairs
+	- sitting
+	- standing
+	- laying
 
 4. Labels the data set with descriptive names appropriately; 
 	- underscores and brackets () are removed. 
+	- all feature names (attributes) and activity names are converted to lower case
 Then it merges the 10299x66 data frame containing features with 10299x1 data frames containing activity labels 
 and subject IDs into a 10299x68 data frame. The result will be exposed into a file named: cleanData.txt 
 
@@ -48,72 +49,72 @@ Notes:
 
 Variables:
 ----------
-- Subject : contains the subject who performed the activity. values are between 1 and 30
-- Activity: Activity descrition. There are 6 different activities mentioned above.- 
-- tBodyAcc-mean-X : mean of time body acceleration in the x-axis
-- tBodyAcc-mean-Y : mean of time body acceleration in the y-axis
-- tBodyAcc-mean-Z : mean of time body acceleration in the z-axis
-- tBodyAcc-std-X 	: standard deviation of time body acceleration in the x-axis
-- tBodyAcc-std-Y 	: standard deviation of time body acceleration in the y-axis
-- tBodyAcc-std-Z 	: standard deviation of time body acceleration in the z-axis
-- tGravityAcc-mean-X : mean of time gravity acceleration in the x-axis
-- tGravityAcc-mean-Y : mean of time gravity acceleration in the y-axis
-- tGravityAcc-mean-Z : mean of time gravity acceleration in the z-axis
-- tGravityAcc-std-X  : standard deviation of time gravity acceleration in the x-axis
-- tGravityAcc-std-Y  : standard deviation of time gravity acceleration in the y-axis
-- tGravityAcc-std-Z  : standard deviation of time gravity acceleration in the z-axis
-- tBodyAccJerk-mean-X : mean of body acceleration Jerk signal in the x-axis
-- tBodyAccJerk-mean-Y : mean of body acceleration Jerk signal in the y-axis
-- tBodyAccJerk-mean-Z : mean of body acceleration Jerk signal in the z-axis
-- tBodyAccJerk-std-X  : standard deviation of body acceleration Jerk signal in the x-axis
-- tBodyAccJerk-std-Y  : standard deviation of body acceleration Jerk signal in the y-axis
-- tBodyAccJerk-std-Z  : standard deviation of body acceleration Jerk signal in the z-axis
-- tBodyGyro-mean-X : mean of body gyro signal in the x-axis
-- tBodyGyro-mean-Y : mean of body gyro signal in the y-axis
-- tBodyGyro-mean-Z : mean of body gyro signal in the z-axis
-- tBodyGyro-std-X : standard deviation of body gyro signal in the x-axis
-- tBodyGyro-std-Y : standard deviation of body gyro signal in the y-axis
-- tBodyGyro-std-Z	: standard deviation of body gyro signal in the z-axis
-- tBodyGyroJerk-mean-X : mean of body gyro Jerk signal in the x-axis
-- tBodyGyroJerk-mean-Y : mean of body gyro Jerk signal in the y-axis
-- tBodyGyroJerk-mean-Z : mean of body gyro Jerk signal in the z-axis
-- tBodyGyroJerk-std-X  : standard deviation of body gyro Jerk signal in the x-axis
-- tBodyGyroJerk-std-Y  : standard deviation of body gyro Jerk signal in the y-axis
-- tBodyGyroJerk-std-Z  : standard deviation of body gyro Jerk signal in the z-axis
-- tBodyAccMag-mean : mean of magnitude of body acceleration
-- tBodyAccMag-std  : standard deviation of body of gravity acceleration
-- tGravityAccMag-mean : mean of magnitude of magnitude acceleration
-- tGravityAccMag-std  : standard deviation of magnitude of gravity acceleration
-- tBodyAccJerkMag-mean : mean of magnitude of body acceleration Jerk signal 
-- tBodyAccJerkMag-std  : standard deviation of magnitude of body acceleration Jerk signal
-- tBodyGyroMag-mean   : mean of magnitude of body gyro
-- tBodyGyroMag-std    : standard deviation of magnitude of body gyro
-- tBodyGyroJerkMag-mean: mean of magnitude of body gyro Jerk signal
-- tBodyGyroJerkMag-std : standard deviation of magnitude of body gyro Jerk signal
-- fBodyAcc-mean-X	: mean of frequency body acceleration in the x-axis
-- fBodyAcc-mean-Y : mean of frequency body acceleration in the y-axis
-- fBodyAcc-mean-Z : mean of frequency body acceleration in the z-axis
-- fBodyAcc-std-X  : standard deviation of frequency body acceleration in the x-axis
-- fBodyAcc-std-Y  : standard deviation of frequency body acceleration in the y-axis
-- fBodyAcc-std-Z  : standard deviation of frequency body acceleration in the z-axis
-- fBodyAccJerk-mean-X : mean of frequency body acceleration Jerk signal in the x-axis
-- fBodyAccJerk-mean-Y : mean of frequency body acceleration Jerk signal in the y-axis
-- fBodyAccJerk-mean-Z : mean of frequency body acceleration Jerk signal in the z-axis
-- fBodyAccJerk-std-X  : standard deviation of frequency body acceleration Jerk signal in the x-axis
-- fBodyAccJerk-std-Y  : standard deviation of frequency body acceleration Jerk signal in the y-axis
-- fBodyAccJerk-std-Z  : standard deviation of frequency body acceleration Jerk signal in the z-axis
-- fBodyGyro-mean-X  : mean of frequency body gyro in the x-axis
-- fBodyGyro-mean-Y  : mean of frequency body gyro in the y-axis
-- fBodyGyro-mean-Z  : mean of frequency body gyro in the z-axis
-- fBodyGyro-std-X  : standard deviation of frequency body gyro in the x-axis
-- fBodyGyro-std-Y  : standard deviation of frequency body gyro in the y-axis
-- fBodyGyro-std-Z  : standard deviation of frequency body gyro in the z-axis
-- fBodyAccMag-mean : mean of frequency of body acceleration magnitude 
-- fBodyAccMag-std  : standard deviation of frequency of body acceleration magnitude
-- fBodyBodyAccJerkMag-mean : mean of frequency of body acceleration Jerk signal magnitude 
-- fBodyBodyAccJerkMag-std  : standard deviation of frequency of body acceleration Jerk signal magnitude 
-- fBodyBodyGyroMag-mean : mean of frequency of body gyro magnitude
-- fBodyBodyGyroMag-std  : standard deviation of frequency of body gyro magnitude
-- fBodyBodyGyroJerkMag-mean : mean of frequency of body gyro Jerk signal magnitude
-- fBodyBodyGyroJerkMag-std  : standard deviation of frequency of body gyro Jerk signal magnitude
+- subject : contains the subject who performed the activity. values are between 1 and 30
+- activity: Activity descrition. There are 6 different activities mentioned above.- 
+- tbodyacc-mean-x : mean of time body acceleration in the x-axis
+- tbodyacc-mean-y : mean of time body acceleration in the y-axis
+- tbodyacc-mean-z : mean of time body acceleration in the z-axis
+- tbodyacc-std-x 	: standard deviation of time body acceleration in the x-axis
+- tbodyacc-std-y 	: standard deviation of time body acceleration in the y-axis
+- tbodyacc-std-z 	: standard deviation of time body acceleration in the z-axis
+- tgravityacc-mean-x : mean of time gravity acceleration in the x-axis
+- tgravityacc-mean-y : mean of time gravity acceleration in the y-axis
+- tgravityacc-mean-z : mean of time gravity acceleration in the z-axis
+- tgravityacc-std-x  : standard deviation of time gravity acceleration in the x-axis
+- tgravityacc-std-y  : standard deviation of time gravity acceleration in the y-axis
+- tgravityacc-std-z  : standard deviation of time gravity acceleration in the z-axis
+- tbodyaccjerk-mean-x : mean of body acceleration Jerk signal in the x-axis
+- tbodyaccjerk-mean-y : mean of body acceleration Jerk signal in the y-axis
+- tbodyaccjerk-mean-z : mean of body acceleration Jerk signal in the z-axis
+- tbodyaccjerk-std-x  : standard deviation of body acceleration Jerk signal in the x-axis
+- tbodyaccjerk-std-y  : standard deviation of body acceleration Jerk signal in the y-axis
+- tbodyaccjerk-std-z  : standard deviation of body acceleration Jerk signal in the z-axis
+- tbodygyro-mean-x : mean of body gyro signal in the x-axis
+- tbodygyro-mean-y : mean of body gyro signal in the y-axis
+- tbodygyro-mean-z : mean of body gyro signal in the z-axis
+- tbodygyro-std-x : standard deviation of body gyro signal in the x-axis
+- tbodygyro-std-y : standard deviation of body gyro signal in the y-axis
+- tbodygyro-std-z	: standard deviation of body gyro signal in the z-axis
+- tbodygyrojerk-mean-x : mean of body gyro Jerk signal in the x-axis
+- tbodygyrojerk-mean-y : mean of body gyro Jerk signal in the y-axis
+- tbodygyrojerk-mean-z : mean of body gyro Jerk signal in the z-axis
+- tbodygyrojerk-std-x  : standard deviation of body gyro Jerk signal in the x-axis
+- tbodygyrojerk-std-y  : standard deviation of body gyro Jerk signal in the y-axis
+- tbodygyrojerk-std-z  : standard deviation of body gyro Jerk signal in the z-axis
+- tbodyaccmag-mean : mean of magnitude of body acceleration
+- tbodyaccmag-std  : standard deviation of body of gravity acceleration
+- tgravityaccmag-mean : mean of magnitude of magnitude acceleration
+- tgravityaccmag-std  : standard deviation of magnitude of gravity acceleration
+- tbodyaccjerkmag-mean : mean of magnitude of body acceleration Jerk signal 
+- tbodyaccjerkmag-std  : standard deviation of magnitude of body acceleration Jerk signal
+- tbodygyromag-mean   : mean of magnitude of body gyro
+- tbodygyromag-std    : standard deviation of magnitude of body gyro
+- tbodygyrojerkmag-mean: mean of magnitude of body gyro Jerk signal
+- tbodygyrojerkmag-std : standard deviation of magnitude of body gyro Jerk signal
+- fbodyacc-mean-x	: mean of frequency body acceleration in the x-axis
+- fbodyacc-mean-y : mean of frequency body acceleration in the y-axis
+- fbodyacc-mean-z : mean of frequency body acceleration in the z-axis
+- fbodyacc-std-x  : standard deviation of frequency body acceleration in the x-axis
+- fbodyacc-std-y  : standard deviation of frequency body acceleration in the y-axis
+- fbodyacc-std-z  : standard deviation of frequency body acceleration in the z-axis
+- fbodyaccjerk-mean-x : mean of frequency body acceleration Jerk signal in the x-axis
+- fbodyaccjerk-mean-y : mean of frequency body acceleration Jerk signal in the y-axis
+- fbodyaccjerk-mean-z : mean of frequency body acceleration Jerk signal in the z-axis
+- fbodyaccjerk-std-x  : standard deviation of frequency body acceleration Jerk signal in the x-axis
+- fbodyaccjerk-std-y  : standard deviation of frequency body acceleration Jerk signal in the y-axis
+- fbodyaccjerk-std-z  : standard deviation of frequency body acceleration Jerk signal in the z-axis
+- fbodygyro-mean-x  : mean of frequency body gyro in the x-axis
+- fbodygyro-mean-y  : mean of frequency body gyro in the y-axis
+- fbodygyro-mean-z  : mean of frequency body gyro in the z-axis
+- fbodygyro-std-x  : standard deviation of frequency body gyro in the x-axis
+- fbodygyro-std-y  : standard deviation of frequency body gyro in the y-axis
+- fbodygyro-std-z  : standard deviation of frequency body gyro in the z-axis
+- fbodyaccmag-mean : mean of frequency of body acceleration magnitude 
+- fbodyaccmag-std  : standard deviation of frequency of body acceleration magnitude
+- fbodybodyaccjerkmag-mean : mean of frequency of body acceleration Jerk signal magnitude 
+- fbodybodyaccjerkmag-std  : standard deviation of frequency of body acceleration Jerk signal magnitude 
+- fbodybodygyromag-mean : mean of frequency of body gyro magnitude
+- fbodybodygyromag-std  : standard deviation of frequency of body gyro magnitude
+- fbodybodygyrojerkmag-mean : mean of frequency of body gyro Jerk signal magnitude
+- fbodybodygyrojerkmag-std  : standard deviation of frequency of body gyro Jerk signal magnitude
 
